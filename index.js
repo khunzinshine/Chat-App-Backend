@@ -23,6 +23,11 @@ mongoose
     console.log(err.message);
   });
 
+app.use(
+  cors({
+    origin: 'https://khun-chat-app.vercel.app',
+  })
+);
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
 
