@@ -33,7 +33,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: process.env.ORIGIN,
+    origin: [process.env.ORIGIN, 'https://khun-chatapp.netlify.app'],
     credentials: true,
   },
 });
